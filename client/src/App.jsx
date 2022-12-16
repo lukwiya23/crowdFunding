@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './index.css'
+import {Sidebar, Navbar} from './components'
+import {Home, Profile, CreateCampaign, CampaignDetails} from './pages'
 
 
 const App = () => {
@@ -8,12 +10,15 @@ const App = () => {
     <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
       <div className="sm:flex hidden mr-10 relative">
      
-    
+    <Sidebar />
       </div>
 
       <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
  
-      <p>This is a test to check if this is working.</p>
+   navbar
+   <Routes>
+    <Route path='/homes' />
+   </Routes>
       </div>
     </div>
   )
